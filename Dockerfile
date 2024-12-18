@@ -1,42 +1,27 @@
-# Use an official PHP image with extensions for Laravel
-FROM php:8.2-fpm
+# Use an official PHP runtime as a parent image
+FROM php:8.0-fpm
 
-ENV PATH="/scripts:${PATH}"
-ENV PYTHONUNBUFFERED 1
-
-# Set working directory
+# Set the working directory
 WORKDIR /var/www
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
-    libpng-dev \
-    zip \
-    unzip \
-    git \
-    curl \
-    libonig-dev \
-    libxml2-dev \
-    libzip-dev \
-    && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd zip
+# Install system dependencies and PHP extensions
+RUN apt-get update && apt-get install -y libpng-dev libjpeg-dev libfreetype6-dev zip git \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install gd pdo pdo_mysql
 
 # Install Composer
-COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Copy existing application code to the container
+# Copy the Laravel application to the container
 COPY . .
 
-# Install dependencies
-RUN composer install --optimize-autoloader --no-dev
+# Install Composer dependencies
+RUN composer install
 
-# Set permissions
-RUN chown -R www-data:www-data /var/www \
-    && chmod -R 775 /var/www/storage /var/www/bootstrap/cache
-
-COPY ./scripts /scripts
-
-# add execution rights to entrypoint scripts
-RUN chmod +x /scripts/*
-
-# Expose port 9000 and start PHP-FPM server
+# Expose port 9000 to be able to access the application
 EXPOSE 9000
-CMD ["php-fpm", "server-entrypoint.sh"]
+
+COPY entrypoint.sh /usr/local/bin/entrypoint
+RUN chmod +x /usr/local/bin/entrypoint
+
+CMD ["entrypoint"]

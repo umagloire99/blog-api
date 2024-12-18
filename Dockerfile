@@ -1,39 +1,37 @@
-# Use PHP 8.2 FPM image
 FROM php:8.2-fpm
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
-    curl \
-    libpng-dev \
-    libonig-dev \
-    libxml2-dev \
-    zip \
-    unzip \
-    git \
-    supervisor
-
-# Clear cache
-RUN apt-get clean && rm -rf /var/lib/apt/lists/*
-
-# Install PHP extensions
-RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
-
-# Install Composer
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+ENV PATH="/scripts:${PATH}"
+ENV PYTHONUNBUFFERED 1
 
 # Set working directory
 WORKDIR /var/www
 
-# Copy application files
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    libpng-dev \
+    zip \
+    unzip \
+    git \
+    curl \
+    libonig-dev \
+    libxml2-dev \
+    libzip-dev \
+    && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd zip
+
+# Install Composer
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+
+# Copy existing application code to the container
 COPY . .
 
 # Install dependencies
-RUN composer install --no-dev --optimize-autoloader
+RUN composer install --optimize-autoloader --no-dev
 
-# Change permissions for Laravel storage
-RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
+# Set permissions
+RUN chown -R www-data:www-data /var/www \
+    && chmod -R 775 /var/www/storage /var/www/bootstrap/cache
 
-# Expose port
+# Expose port 9000 and start PHP-FPM server
 EXPOSE 9000
 
 # Start PHP-FPM

@@ -13,17 +13,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-    services:
-      mysql:
-        image: mysql:8.0
-        env:
-          MYSQL_ALLOW_EMPTY_PASSWORD: yes
-          MYSQL_DATABASE: laravel
-        ports:
-          - 3306:3306
-        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
-
-
     steps:
     - uses: actions/checkout@v3
 
@@ -40,9 +29,8 @@ jobs:
         cp .env.example .env
         php artisan key:generate
 
-
     - name: Run Tests
-      run: php artisan test --env=testing
+      run: vendor/bin/phpunit
 
   build_and_push:
     name: "Build and push"

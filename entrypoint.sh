@@ -7,7 +7,8 @@ while ! nc -z db 3306; do
 done
 
 # Run Laravel commands
-php artisan key:generate
+echo "Running Laravel setup commands..."
+php artisan key:generate --ansi
 php artisan scribe:generate
 php artisan migrate --force
 php artisan db:seed --force

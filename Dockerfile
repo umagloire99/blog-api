@@ -1,29 +1,43 @@
-# Use an official PHP runtime as a parent image
-FROM php:8.3-fpm-alpine
+# Use PHP 8.2 FPM image
+FROM php:8.2-fpm
 
-# Set the working directory
-WORKDIR /var/www
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    curl \
+    libpng-dev \
+    libonig-dev \
+    libxml2-dev \
+    zip \
+    unzip \
+    git \
+    supervisor
 
-# Install system dependencies and PHP extensions
-RUN apt-get update && apt-get install -y libpng-dev libjpeg-dev libfreetype6-dev zip git \
-    && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install gd pdo pdo_mysql
+# Clear cache
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Install PHP extensions
+RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
 
 # Install Composer
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# Copy the Laravel application to the container
+# Set working directory
+WORKDIR /var/www
+
+# Copy application files
 COPY . .
 
-# Install Composer dependencies
-RUN composer install
+# Install dependencies
+RUN composer install --no-dev --optimize-autoloader
 
-# Set permissions
+# Change permissions for Laravel storage
+RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
 
-# Expose port 9000 to be able to access the application
+# Expose port
 EXPOSE 9000
 
-COPY entrypoint.sh /usr/local/bin/entrypoint
-RUN chmod +x /usr/local/bin/entrypoint
-
-CMD ["entrypoint"]
+# Start PHP-FPM
+CMD php artisan key:generate && \
+    php artisan migrate --force && \
+    php artisan db:seed --force && \
+    php-fpm

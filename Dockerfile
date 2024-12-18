@@ -1,5 +1,5 @@
 # Use an official PHP runtime as a parent image
-FROM php:8.0-fpm
+FROM php:8.2-fpm
 
 # Set the working directory
 WORKDIR /var/www
@@ -17,6 +17,8 @@ COPY . .
 
 # Install Composer dependencies
 RUN composer install
+
+# Set permissions
 
 # Expose port 9000 to be able to access the application
 EXPOSE 9000

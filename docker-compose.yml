@@ -14,9 +14,9 @@ services:
       - DB_CONNECTION=mysql
       - DB_HOST=db
       - DB_PORT=3306
-      - DB_DATABASE=bloag_api
-      - DB_USERNAME=root
-      - DB_PASSWORD=root
+      - DB_DATABASE=blog_api
+      - DB_USERNAME=blog_user
+      - DB_PASSWORD=rblog_pass
     networks:
       - bloag-network
 
@@ -27,7 +27,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: blog_api
       MYSQL_USER: blog_user
-      MYSQL_PASSWORD: bloag_pass
+      MYSQL_PASSWORD: blog_pass
     ports:
       - "3306:3306"
     volumes:

@@ -1,0 +1,474 @@
+name: Users
+description: |-
+
+  Mange Users.
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/users/index
+    metadata:
+      groupName: Users
+      groupDescription: |-
+
+        Mange Users.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the user.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      page:
+        name: page
+        description: 'The page number for pagination.'
+        required: false
+        example: 2
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      per_page:
+        name: per_page
+        description: 'Number of results per page. Defaults to 10.'
+        required: false
+        example: 5
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      search:
+        name: search
+        description: 'Search term to filter blog posts.'
+        required: false
+        example: Laravel
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      role:
+        name: role
+        description: 'Role name.'
+        required: false
+        example: admin
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      page: 2
+      per_page: 5
+      search: Laravel
+      role: admin
+    bodyParameters:
+      page:
+        name: page
+        description: 'The page number for pagination. Must be at least 1.'
+        required: false
+        example: 2
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      per_page:
+        name: per_page
+        description: 'Number of results per page. Defaults to 10. Must be at least 1. Must not be greater than 100.'
+        required: false
+        example: 5
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      search:
+        name: search
+        description: 'Search term to filter users.'
+        required: false
+        example: Laravel
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      role:
+        name: role
+        description: 'Role name to filter users. The <code>name</code> of an existing record in the roles table.'
+        required: false
+        example: admin
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+    cleanBodyParameters:
+      page: 2
+      per_page: 5
+      search: Laravel
+      role: admin
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/users/create
+    metadata:
+      groupName: Users
+      groupDescription: |-
+
+        Mange Users.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Show the form for creating a new resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/users/store
+    metadata:
+      groupName: Users
+      groupDescription: |-
+
+        Mange Users.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'The full name of the user. Must not be greater than 255 characters.'
+        required: true
+        example: 'John Doe'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      email:
+        name: email
+        description: 'The email address of the user. Must be unique.'
+        required: true
+        example: johndoe@example.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      password:
+        name: password
+        description: 'The password for the user. Must be confirmed with the `password_confirmation` field.'
+        required: true
+        example: $NoPass123!
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      role_id:
+        name: role_id
+        description: 'The ID of the role assigned to the user. Must exist in the roles table. The <code>id</code> of an existing record in the roles table.'
+        required: true
+        example: 1
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      name: 'John Doe'
+      email: johndoe@example.com
+      password: $NoPass123!
+      role_id: 1
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/users/{username}'
+    metadata:
+      groupName: Users
+      groupDescription: |-
+
+        Mange Users.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      username:
+        name: username
+        description: ''
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      username: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/users/{user_username}/edit'
+    metadata:
+      groupName: Users
+      groupDescription: |-
+
+        Mange Users.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Show the form for editing the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      user_username:
+        name: user_username
+        description: ''
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      user_username: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PATCH
+    uri: 'api/users/{username}/update'
+    metadata:
+      groupName: Users
+      groupDescription: |-
+
+        Mange Users.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      username:
+        name: username
+        description: ''
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      username: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'The full name of the user. Must not be greater than 255 characters.'
+        required: true
+        example: 'John Doe'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      email:
+        name: email
+        description: 'The email address of the user. Must be unique.'
+        required: true
+        example: johndoe@example.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      role_id:
+        name: role_id
+        description: 'The ID of the role assigned to the user. Must exist in the roles table. The <code>id</code> of an existing record in the roles table.'
+        required: true
+        example: 1
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      password:
+        name: password
+        description: 'The password for the user. Must be confirmed with the `password_confirmation` field.'
+        required: false
+        example: $NoPass123!
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      name: 'John Doe'
+      email: johndoe@example.com
+      role_id: 1
+      password: $NoPass123!
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: api//destroy
+    metadata:
+      groupName: Users
+      groupDescription: |-
+
+        Mange Users.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

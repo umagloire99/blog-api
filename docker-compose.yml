@@ -1,0 +1,55 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: blog-api
+    container_name: blog-api
+    command: ["scripts/wait-for-it.sh", "db", "3306", "--", "bash", "-c", "php artisan migrate && php artisan db:seed"]
+    ports:
+      - "9000:9000"
+    volumes:
+      - .:/var/www
+    networks:
+      - blog
+    environment:
+      MYSQL_DATABASE: laravel
+      MYSQL_USER: laravel
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: root
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    container_name: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: laravel
+      MYSQL_USER: laravel
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - dbdata:/var/lib/mysql
+    networks:
+      - blog
+
+  nginx:
+    image: nginx:stable
+    container_name: nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www
+      - ./docker/nginx/conf.d:/etc/nginx/conf.d
+    networks:
+      - blog
+    depends_on:
+      - app
+
+volumes:
+  dbdata:
+
+networks:
+  blog:

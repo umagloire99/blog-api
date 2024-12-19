@@ -36,4 +36,5 @@ EXPOSE 9000
 
 # Start PHP-FPM
 CMD php artisan key:generate && \
+    php artisan scribe:generate \
     php-fpm

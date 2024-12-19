@@ -13,24 +13,20 @@ services:
     env_file:
       - .env
     networks:
-      - blog-network
+      - blog-api-network
 
   db:
     image: mysql:8.0
     container_name: blog-api-db
+    restart: always
     env_file:
       - .env
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: ${DB_DATABASE}
-      MYSQL_USER: ${DB_USERNAME}
-      MYSQL_PASSWORD: ${DB_PASSWORD}
     ports:
       - "3306:3306"
     volumes:
       - mysql_data:/var/lib/mysql
     networks:
-      - blog-network
+      - blog-api-network
 
   nginx:
     image: nginx:stable-alpine
@@ -43,10 +39,10 @@ services:
     depends_on:
       - app
     networks:
-      - blog-network
+      - blog-api-network
 
 networks:
-  blog-network:
+  blog-api-network:
     driver: bridge
 
 volumes:

@@ -30,7 +30,7 @@ endpoints:
         name: page
         description: 'The page number for pagination.'
         required: false
-        example: 2
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: true
@@ -40,7 +40,7 @@ endpoints:
         name: per_page
         description: 'Number of results per page. Defaults to 10.'
         required: false
-        example: 5
+        example: 10
         type: integer
         enumValues: []
         exampleWasSpecified: true
@@ -67,8 +67,8 @@ endpoints:
         nullable: false
         custom: []
     cleanQueryParameters:
-      page: 2
-      per_page: 5
+      page: 1
+      per_page: 10
       search: Laravel
       'tags[]': 'tags[]=laravel&tags[]=php'
     bodyParameters:
@@ -126,422 +126,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 403
-        content: |-
-          {
-              "message": "This action is unauthorized.",
-              "exception": "Symfony\\Component\\HttpKernel\\Exception\\AccessDeniedHttpException",
-              "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php",
-              "line": 639,
-              "trace": [
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php",
-                      "line": 583,
-                      "function": "prepareException",
-                      "class": "Illuminate\\Foundation\\Exceptions\\Handler",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/nunomaduro/collision/src/Adapters/Laravel/ExceptionHandler.php",
-                      "line": 54,
-                      "function": "render",
-                      "class": "Illuminate\\Foundation\\Exceptions\\Handler",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php",
-                      "line": 51,
-                      "function": "render",
-                      "class": "NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 146,
-                      "function": "handleException",
-                      "class": "Illuminate\\Routing\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php",
-                      "line": 51,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 183,
-                      "function": "handle",
-                      "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 119,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-                      "line": 807,
-                      "function": "then",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-                      "line": 786,
-                      "function": "runRouteWithinStack",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-                      "line": 750,
-                      "function": "runRoute",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-                      "line": 739,
-                      "function": "dispatchToRoute",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
-                      "line": 201,
-                      "function": "dispatch",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 144,
-                      "function": "Illuminate\\Foundation\\Http\\{closure}",
-                      "class": "Illuminate\\Foundation\\Http\\Kernel",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
-                      "line": 21,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php",
-                      "line": 31,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 183,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
-                      "line": 21,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php",
-                      "line": 51,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 183,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TrimStrings",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php",
-                      "line": 27,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 183,
-                      "function": "handle",
-                      "class": "Illuminate\\Http\\Middleware\\ValidatePostSize",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php",
-                      "line": 110,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 183,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php",
-                      "line": 62,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 183,
-                      "function": "handle",
-                      "class": "Illuminate\\Http\\Middleware\\HandleCors",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php",
-                      "line": 58,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 183,
-                      "function": "handle",
-                      "class": "Illuminate\\Http\\Middleware\\TrustProxies",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php",
-                      "line": 22,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 183,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 119,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
-                      "line": 176,
-                      "function": "then",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
-                      "line": 145,
-                      "function": "sendRequestThroughRouter",
-                      "class": "Illuminate\\Foundation\\Http\\Kernel",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
-                      "line": 310,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Kernel",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
-                      "line": 298,
-                      "function": "callLaravelOrLumenRoute",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
-                      "line": 91,
-                      "function": "makeApiCall",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
-                      "line": 44,
-                      "function": "makeResponseCall",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
-                      "line": 35,
-                      "function": "makeResponseCallIfConditionsPass",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
-                      "line": 237,
-                      "function": "__invoke",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
-                      "line": 163,
-                      "function": "iterateThroughStrategies",
-                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
-                      "line": 95,
-                      "function": "fetchResponses",
-                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
-                      "line": 125,
-                      "function": "processRoute",
-                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
-                      "line": 72,
-                      "function": "extractEndpointsInfoFromLaravelApp",
-                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
-                      "line": 50,
-                      "function": "extractEndpointsInfoAndWriteToDisk",
-                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php",
-                      "line": 53,
-                      "function": "get",
-                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
-                      "line": 36,
-                      "function": "handle",
-                      "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Container/Util.php",
-                      "line": 43,
-                      "function": "Illuminate\\Container\\{closure}",
-                      "class": "Illuminate\\Container\\BoundMethod",
-                      "type": "::"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
-                      "line": 95,
-                      "function": "unwrapIfClosure",
-                      "class": "Illuminate\\Container\\Util",
-                      "type": "::"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
-                      "line": 35,
-                      "function": "callBoundMethod",
-                      "class": "Illuminate\\Container\\BoundMethod",
-                      "type": "::"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Container/Container.php",
-                      "line": 694,
-                      "function": "call",
-                      "class": "Illuminate\\Container\\BoundMethod",
-                      "type": "::"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Console/Command.php",
-                      "line": 213,
-                      "function": "call",
-                      "class": "Illuminate\\Container\\Container",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/symfony/console/Command/Command.php",
-                      "line": 279,
-                      "function": "execute",
-                      "class": "Illuminate\\Console\\Command",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Console/Command.php",
-                      "line": 182,
-                      "function": "run",
-                      "class": "Symfony\\Component\\Console\\Command\\Command",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/symfony/console/Application.php",
-                      "line": 1094,
-                      "function": "run",
-                      "class": "Illuminate\\Console\\Command",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/symfony/console/Application.php",
-                      "line": 342,
-                      "function": "doRunCommand",
-                      "class": "Symfony\\Component\\Console\\Application",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/symfony/console/Application.php",
-                      "line": 193,
-                      "function": "doRun",
-                      "class": "Symfony\\Component\\Console\\Application",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php",
-                      "line": 198,
-                      "function": "run",
-                      "class": "Symfony\\Component\\Console\\Application",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Foundation/Application.php",
-                      "line": 1205,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Console\\Kernel",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/artisan",
-                      "line": 13,
-                      "function": "handleCommand",
-                      "class": "Illuminate\\Foundation\\Application",
-                      "type": "->"
-                  }
-              ]
-          }
+        status: 422
+        content: '{"success":false,"message":"The selected tags is invalid.","errors":{"tags":["The selected tags is invalid."]}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -565,7 +151,7 @@ endpoints:
         APIs for posts.
       subgroup: ''
       subgroupDescription: ''
-      title: 'Display the specified resource.'
+      title: 'Display the specified post.'
       description: ''
       authenticated: false
       custom: []
@@ -577,14 +163,14 @@ endpoints:
         name: slug
         description: 'The slug of the post.'
         required: true
-        example: 13
+        example: 12
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      slug: 13
+      slug: 12
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -593,407 +179,7 @@ endpoints:
     responses:
       -
         status: 404
-        content: |-
-          {
-              "message": "No query results for model [App\\Models\\Post] 13",
-              "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
-              "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php",
-              "line": 635,
-              "trace": [
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php",
-                      "line": 583,
-                      "function": "prepareException",
-                      "class": "Illuminate\\Foundation\\Exceptions\\Handler",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/nunomaduro/collision/src/Adapters/Laravel/ExceptionHandler.php",
-                      "line": 54,
-                      "function": "render",
-                      "class": "Illuminate\\Foundation\\Exceptions\\Handler",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php",
-                      "line": 51,
-                      "function": "render",
-                      "class": "NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 188,
-                      "function": "handleException",
-                      "class": "Illuminate\\Routing\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 119,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-                      "line": 807,
-                      "function": "then",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-                      "line": 786,
-                      "function": "runRouteWithinStack",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-                      "line": 750,
-                      "function": "runRoute",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
-                      "line": 739,
-                      "function": "dispatchToRoute",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
-                      "line": 201,
-                      "function": "dispatch",
-                      "class": "Illuminate\\Routing\\Router",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 144,
-                      "function": "Illuminate\\Foundation\\Http\\{closure}",
-                      "class": "Illuminate\\Foundation\\Http\\Kernel",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
-                      "line": 21,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php",
-                      "line": 31,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 183,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
-                      "line": 21,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php",
-                      "line": 51,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 183,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TrimStrings",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php",
-                      "line": 27,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 183,
-                      "function": "handle",
-                      "class": "Illuminate\\Http\\Middleware\\ValidatePostSize",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php",
-                      "line": 110,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 183,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php",
-                      "line": 62,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 183,
-                      "function": "handle",
-                      "class": "Illuminate\\Http\\Middleware\\HandleCors",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php",
-                      "line": 58,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 183,
-                      "function": "handle",
-                      "class": "Illuminate\\Http\\Middleware\\TrustProxies",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php",
-                      "line": 22,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 183,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
-                      "line": 119,
-                      "function": "Illuminate\\Pipeline\\{closure}",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
-                      "line": 176,
-                      "function": "then",
-                      "class": "Illuminate\\Pipeline\\Pipeline",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
-                      "line": 145,
-                      "function": "sendRequestThroughRouter",
-                      "class": "Illuminate\\Foundation\\Http\\Kernel",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
-                      "line": 310,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Http\\Kernel",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
-                      "line": 298,
-                      "function": "callLaravelOrLumenRoute",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
-                      "line": 91,
-                      "function": "makeApiCall",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
-                      "line": 44,
-                      "function": "makeResponseCall",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
-                      "line": 35,
-                      "function": "makeResponseCallIfConditionsPass",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
-                      "line": 237,
-                      "function": "__invoke",
-                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
-                      "line": 163,
-                      "function": "iterateThroughStrategies",
-                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
-                      "line": 95,
-                      "function": "fetchResponses",
-                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
-                      "line": 125,
-                      "function": "processRoute",
-                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
-                      "line": 72,
-                      "function": "extractEndpointsInfoFromLaravelApp",
-                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
-                      "line": 50,
-                      "function": "extractEndpointsInfoAndWriteToDisk",
-                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php",
-                      "line": 53,
-                      "function": "get",
-                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
-                      "line": 36,
-                      "function": "handle",
-                      "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Container/Util.php",
-                      "line": 43,
-                      "function": "Illuminate\\Container\\{closure}",
-                      "class": "Illuminate\\Container\\BoundMethod",
-                      "type": "::"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
-                      "line": 95,
-                      "function": "unwrapIfClosure",
-                      "class": "Illuminate\\Container\\Util",
-                      "type": "::"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
-                      "line": 35,
-                      "function": "callBoundMethod",
-                      "class": "Illuminate\\Container\\BoundMethod",
-                      "type": "::"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Container/Container.php",
-                      "line": 694,
-                      "function": "call",
-                      "class": "Illuminate\\Container\\BoundMethod",
-                      "type": "::"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Console/Command.php",
-                      "line": 213,
-                      "function": "call",
-                      "class": "Illuminate\\Container\\Container",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/symfony/console/Command/Command.php",
-                      "line": 279,
-                      "function": "execute",
-                      "class": "Illuminate\\Console\\Command",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Console/Command.php",
-                      "line": 182,
-                      "function": "run",
-                      "class": "Symfony\\Component\\Console\\Command\\Command",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/symfony/console/Application.php",
-                      "line": 1094,
-                      "function": "run",
-                      "class": "Illuminate\\Console\\Command",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/symfony/console/Application.php",
-                      "line": 342,
-                      "function": "doRunCommand",
-                      "class": "Symfony\\Component\\Console\\Application",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/symfony/console/Application.php",
-                      "line": 193,
-                      "function": "doRun",
-                      "class": "Symfony\\Component\\Console\\Application",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php",
-                      "line": 198,
-                      "function": "run",
-                      "class": "Symfony\\Component\\Console\\Application",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/vendor/laravel/framework/src/Illuminate/Foundation/Application.php",
-                      "line": 1205,
-                      "function": "handle",
-                      "class": "Illuminate\\Foundation\\Console\\Kernel",
-                      "type": "->"
-                  },
-                  {
-                      "file": "/Users/umagloire/Sites/Freelance/blog-api/artisan",
-                      "line": 13,
-                      "function": "handleCommand",
-                      "class": "Illuminate\\Foundation\\Application",
-                      "type": "->"
-                  }
-              ]
-          }
+        content: '{"success":false,"message":"Resources not found"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -1002,6 +188,84 @@ endpoints:
         custom: []
     responseFields: []
     auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/posts/{post_slug}/comments'
+    metadata:
+      groupName: Posts
+      groupDescription: |-
+
+        APIs for posts.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get comments for a specific post.'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      post_slug:
+        name: post_slug
+        description: 'The slug of the post.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      post_slug: 1
+    queryParameters:
+      page:
+        name: page
+        description: 'The page number for pagination.'
+        required: false
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      per_page:
+        name: per_page
+        description: 'Number of results per page. Defaults to 10.'
+        required: false
+        example: 10
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      page: 1
+      per_page: 10
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 404
+        content: '{"success":false,"message":"Resources not found"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 68k1dav4Zf35D6cgEhVePab'
     controller: null
     method: null
     route: null
@@ -1019,10 +283,11 @@ endpoints:
       subgroupDescription: ''
       title: 'Store a newly created post in storage.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
-      Content-Type: application/json
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: multipart/form-data
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
@@ -1092,7 +357,10 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer Vv18PckD5663ge4fEbhadaZ'
     controller: null
     method: null
     route: null
@@ -1108,26 +376,27 @@ endpoints:
         APIs for posts.
       subgroup: ''
       subgroupDescription: ''
-      title: 'Update the specified resource in storage.'
+      title: 'Update post.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
-      Content-Type: application/json
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: multipart/form-data
       Accept: application/json
     urlParameters:
       slug:
         name: slug
         description: 'The slug of the post.'
         required: true
-        example: 10
+        example: 13
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      slug: 10
+      slug: 13
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -1194,7 +463,10 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer PkhZa63aEv5efc4gD68bV1d'
     controller: null
     method: null
     route: null
@@ -1210,11 +482,12 @@ endpoints:
         APIs for posts.
       subgroup: ''
       subgroupDescription: ''
-      title: destroy
+      title: 'Delete a specific post.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -1222,14 +495,14 @@ endpoints:
         name: slug
         description: 'The slug of the post.'
         required: true
-        example: 20
+        example: 17
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      slug: 20
+      slug: 17
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1237,81 +510,10 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/posts/{post_slug}/comments'
-    metadata:
-      groupName: Posts
-      groupDescription: |-
-
-        APIs for posts.
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Get Post comments'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      post_slug:
-        name: post_slug
-        description: 'The slug of the post.'
-        required: true
-        example: 6
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-    cleanUrlParameters:
-      post_slug: 6
-    queryParameters:
-      page:
-        name: page
-        description: 'The page number for pagination.'
-        required: false
-        example: 2
-        type: integer
-        enumValues: []
-        exampleWasSpecified: true
-        nullable: false
-        custom: []
-      per_page:
-        name: per_page
-        description: 'Number of results per page. Defaults to 10.'
-        required: false
-        example: 5
-        type: integer
-        enumValues: []
-        exampleWasSpecified: true
-        nullable: false
-        custom: []
-    cleanQueryParameters:
-      page: 2
-      per_page: 5
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 61DZb5kahEdPvf36ea48cVg'
     controller: null
     method: null
     route: null
@@ -1327,11 +529,12 @@ endpoints:
         APIs for posts.
       subgroup: ''
       subgroupDescription: ''
-      title: addComment
+      title: 'Add a comment to specified post.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -1339,14 +542,14 @@ endpoints:
         name: post_slug
         description: 'The slug of the post.'
         required: true
-        example: 18
+        example: 9
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      post_slug: 18
+      post_slug: 9
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -1365,7 +568,68 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 8a6dP5h3VD1cbvZk6f4aEeg'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/posts/{post_slug}/uploads/{upload_ref}/remove'
+    metadata:
+      groupName: Posts
+      groupDescription: |-
+
+        APIs for posts.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Delete a specific file from a post.'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      post_slug:
+        name: post_slug
+        description: 'The slug of the post.'
+        required: true
+        example: 20
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      upload_ref:
+        name: upload_ref
+        description: ''
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      post_slug: 20
+      upload_ref: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer Ef68PZ1gc4vVaedb3k56Dha'
     controller: null
     method: null
     route: null

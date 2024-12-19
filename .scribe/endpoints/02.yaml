@@ -90,9 +90,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Store a newly created tag in storage.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -115,7 +116,10 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 1gdc8aZeDfkh46Va6Eb3P5v'
     controller: null
     method: null
     route: null
@@ -133,9 +137,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Update the specified tag in storage.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -143,14 +148,14 @@ endpoints:
         name: slug
         description: 'The slug of the tag.'
         required: true
-        example: 7
+        example: 4
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      slug: 7
+      slug: 4
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -169,7 +174,10 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer Vc3e6b4ZaEP1h6g8kvfDda5'
     controller: null
     method: null
     route: null
@@ -187,9 +195,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Remove the specified tag from storage.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -197,14 +206,14 @@ endpoints:
         name: slug
         description: 'The slug of the tag.'
         required: true
-        example: 17
+        example: 6
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      slug: 17
+      slug: 6
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -212,7 +221,10 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6aVv5dD8f1kEb63hea4gZcP'
     controller: null
     method: null
     route: null

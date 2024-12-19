@@ -1,7 +1,5 @@
 name: Comments
-description: |-
-
-  APIs for comments.
+description: ''
 endpoints:
   -
     httpMethods:
@@ -9,16 +7,15 @@ endpoints:
     uri: 'api/comments/{comment_id}/comments/add'
     metadata:
       groupName: Comments
-      groupDescription: |-
-
-        APIs for comments.
+      groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
       title: 'Leave a reply to a comment'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -26,14 +23,14 @@ endpoints:
         name: comment_id
         description: 'The ID of the comment.'
         required: true
-        example: 6
+        example: 11
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      comment_id: 6
+      comment_id: 11
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -52,7 +49,10 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6bg46aefh5PVDa3Z1d8Eckv'
     controller: null
     method: null
     route: null
@@ -63,16 +63,15 @@ endpoints:
     uri: 'api/comments/{id}/update'
     metadata:
       groupName: Comments
-      groupDescription: |-
-
-        APIs for comments.
+      groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Update the specified comment in storage.'
+      title: 'Update the specified comment.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -80,14 +79,14 @@ endpoints:
         name: id
         description: 'The ID of the comment.'
         required: true
-        example: 2
+        example: 20
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 2
+      id: 20
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -95,7 +94,10 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer DP4efE1gdaV36b5vZ8chka6'
     controller: null
     method: null
     route: null
@@ -106,16 +108,15 @@ endpoints:
     uri: 'api/comments/{id}/destroy'
     metadata:
       groupName: Comments
-      groupDescription: |-
-
-        APIs for comments.
+      groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Remove the specified comment from storage.'
+      title: 'Delete the specified comment.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -138,7 +139,10 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6V84hfZPacgEavbde163Dk5'
     controller: null
     method: null
     route: null

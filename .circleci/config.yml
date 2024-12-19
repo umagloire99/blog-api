@@ -14,7 +14,7 @@ jobs:
             - v1-dependencies-{{ checksum "composer.json" }}
       - run:
           name: "Install Dependencies"
-          command: composer install -n --prefer-dist
+          command: composer install
 
       - save_cache:
           key: v1-dependencies-{{ checksum "composer.json" }}
@@ -29,13 +29,13 @@ jobs:
           force: true
       - run:
           command: |
-            yes | heroku run --app=${HEROKU_APP_NAME} php artisan migrate
+            heroku run --app=${HEROKU_APP_NAME} php artisan migrate --quiet || exit 1
       - run:
           command: |
-            yes | heroku run --app=${HEROKU_APP_NAME} php artisan db:seed
+            heroku run --app=${HEROKU_APP_NAME} php artisan db:seed --quiet || exit 1
       - run:
           command: |
-            yes | heroku run --app=${HEROKU_APP_NAME} php artisan scribe:generate
+            heroku run --app=${HEROKU_APP_NAME} php artisan scribe:generate --quiet || exit 1
 workflows:
   deploy:
     jobs:

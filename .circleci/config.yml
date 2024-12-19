@@ -29,7 +29,10 @@ jobs:
           force: true
       - run:
           command: |
-            yes | heroku run --app=${HEROKU_APP_NAME} php artisan migrate --seed
+            yes | heroku run --app=${HEROKU_APP_NAME} php artisan migrate
+      - run:
+          command: |
+            yes | heroku run --app=${HEROKU_APP_NAME} php artisan db:seed
       - run:
           command: |
             yes | heroku run --app=${HEROKU_APP_NAME} php artisan scribe:generate

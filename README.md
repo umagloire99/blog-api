@@ -7,8 +7,9 @@
     <br />
     <a href="http://blog-api-d168872c4b9a.herokuapp.com/"><strong>Explore API docs »</strong></a>
     <br />
-    <br />
     <a href="http://blog-api-d168872c4b9a.herokuapp.com/api/">http://blog-api-d168872c4b9a.herokuapp.com/api/</a>
+    <br />
+    <a href="https://hub.docker.com/r/umagloire/blog-api">Docker image</a>
 </p>
 
 ## Features
@@ -31,23 +32,39 @@
 
 ## Installation
 
-### Step 1: Clone the Repository
+### Option 1: Clone the Repository
+
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/umagloire99/blog-api.git
 cd blog-api
 ```
 
-### Step 2: Setup Environment Variables
+2. Setup Environment Variables
 
 ```bash
 cp .env.example .env
 ```
 
-### Step 4: Start Docker Containers
+3. Start Docker Containers
 
 ```bash
 docker-compose up --build
+```
+
+### Option 2: Pull Prebuilt Docker Image
+
+1. Pull image
+
+```bash
+docker pull umagloire/blog-api
+```
+
+2. Start the container
+
+```bash
+docker run -d --name blog-api -p 8080:80 --env-file .env umagloire/blog-api
 ```
 
 ## Usage

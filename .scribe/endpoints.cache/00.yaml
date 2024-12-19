@@ -32,7 +32,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: ara96@example.net
+        example: pedro.miller@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -42,15 +42,15 @@ endpoints:
         name: password
         description: 'Must be at least 6 characters.'
         required: true
-        example: ~ajF1!
+        example: nQW|!God=/To=ng
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      email: ara96@example.net
-      password: ~ajF1!
+      email: pedro.miller@example.net
+      password: nQW|!God=/To=ng
     fileParameters: []
     responses: []
     responseFields: []
@@ -86,7 +86,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: in
+        example: qui
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -96,7 +96,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: lempi27@example.net
+        example: vivian.rippin@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -106,16 +106,16 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: ZCXO3w5tf~|.2LD/B
+        example: 'H?+9]ns62!?^evKkq0'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      name: in
-      email: lempi27@example.net
-      password: ZCXO3w5tf~|.2LD/B
+      name: qui
+      email: vivian.rippin@example.net
+      password: 'H?+9]ns62!?^evKkq0'
     fileParameters: []
     responses: []
     responseFields: []
@@ -155,7 +155,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer bhevZV154c6PEdaak6g3D8f'
+      - 'Bearer afgDZEe8P5kV4hbd661av3c'
     controller: null
     method: null
     route: null

@@ -29,13 +29,13 @@ jobs:
           force: true
       - run:
           command: |
-            heroku run --app=${HEROKU_APP_NAME} php artisan migrate --quiet || exit 1
+            heroku run --app=${HEROKU_APP_NAME} php artisan migrate || exit 1
       - run:
           command: |
-            heroku run --app=${HEROKU_APP_NAME} php artisan db:seed --quiet || exit 1
+            heroku run --app=${HEROKU_APP_NAME} php artisan db:seed || exit 1
       - run:
           command: |
-            heroku run --app=${HEROKU_APP_NAME} php artisan scribe:generate --quiet || exit 1
+            heroku run --app=${HEROKU_APP_NAME} php artisan scribe:generate || exit 1
 workflows:
   deploy:
     jobs:

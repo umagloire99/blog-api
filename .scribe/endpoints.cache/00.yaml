@@ -32,7 +32,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: pedro.miller@example.net
+        example: fmaggio@example.com
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -42,15 +42,15 @@ endpoints:
         name: password
         description: 'Must be at least 6 characters.'
         required: true
-        example: nQW|!God=/To=ng
+        example: 'r$[C|cZGS<0(kh;1)g'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      email: pedro.miller@example.net
-      password: nQW|!God=/To=ng
+      email: fmaggio@example.com
+      password: 'r$[C|cZGS<0(kh;1)g'
     fileParameters: []
     responses: []
     responseFields: []
@@ -86,7 +86,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: qui
+        example: deleniti
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -96,7 +96,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: vivian.rippin@example.net
+        example: mills.dayne@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -106,16 +106,16 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: 'H?+9]ns62!?^evKkq0'
+        example: 'bo($ffQd6Q&Gm>yI`{*d'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      name: qui
-      email: vivian.rippin@example.net
-      password: 'H?+9]ns62!?^evKkq0'
+      name: deleniti
+      email: mills.dayne@example.net
+      password: 'bo($ffQd6Q&Gm>yI`{*d'
     fileParameters: []
     responses: []
     responseFields: []
@@ -155,7 +155,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer afgDZEe8P5kV4hbd661av3c'
+      - 'Bearer Evf6dgbD5Z4a1Pe3akVh68c'
     controller: null
     method: null
     route: null

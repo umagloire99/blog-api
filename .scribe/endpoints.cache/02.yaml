@@ -66,7 +66,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"status":true,"message":"Tags successully retrieved.","data":{"current_page":2,"data":[],"first_page_url":"https:\/\/blog-api.test\/api\/tags?query=Laravel&page=1","from":null,"last_page":1,"last_page_url":"https:\/\/blog-api.test\/api\/tags?query=Laravel&page=1","links":[{"url":"https:\/\/blog-api.test\/api\/tags?query=Laravel&page=1","label":"&laquo; Previous","active":false},{"url":"https:\/\/blog-api.test\/api\/tags?query=Laravel&page=1","label":"1","active":false},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"https:\/\/blog-api.test\/api\/tags","per_page":15,"prev_page_url":"https:\/\/blog-api.test\/api\/tags?query=Laravel&page=1","to":null,"total":0}}'
+        content: '{"status":true,"message":"Tags successully retrieved.","data":{"current_page":2,"data":[],"first_page_url":"https:\/\/blog-api-d168872c4b9a.herokuapp.com\/api\/tags?query=Laravel&page=1","from":null,"last_page":1,"last_page_url":"https:\/\/blog-api-d168872c4b9a.herokuapp.com\/api\/tags?query=Laravel&page=1","links":[{"url":"https:\/\/blog-api-d168872c4b9a.herokuapp.com\/api\/tags?query=Laravel&page=1","label":"&laquo; Previous","active":false},{"url":"https:\/\/blog-api-d168872c4b9a.herokuapp.com\/api\/tags?query=Laravel&page=1","label":"1","active":false},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"https:\/\/blog-api-d168872c4b9a.herokuapp.com\/api\/tags","per_page":15,"prev_page_url":"https:\/\/blog-api-d168872c4b9a.herokuapp.com\/api\/tags?query=Laravel&page=1","to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -121,7 +121,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer aDagv6EVkdZbc516Ph8e34f'
+      - 'Bearer VcdZfPba5v6a8h3kg6eE41D'
     controller: null
     method: null
     route: null
@@ -150,14 +150,14 @@ endpoints:
         name: slug
         description: 'The slug of the tag.'
         required: true
-        example: 12
+        example: 13
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      slug: 12
+      slug: 13
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -179,7 +179,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Ef6ZDv3PaedhVb1gka8c456'
+      - 'Bearer 6cfEV6gh54kebP1daa3ZDv8'
     controller: null
     method: null
     route: null
@@ -208,14 +208,14 @@ endpoints:
         name: slug
         description: 'The slug of the tag.'
         required: true
-        example: 3
+        example: 11
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      slug: 3
+      slug: 11
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -226,7 +226,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer bf4D6VZ56g31dckEvPe8aha'
+      - 'Bearer h1bVvD5fkE36c4Pae8d6gZa'
     controller: null
     method: null
     route: null

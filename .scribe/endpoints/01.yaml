@@ -161,14 +161,14 @@ endpoints:
         name: slug
         description: 'The slug of the post.'
         required: true
-        example: 1
+        example: 13
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      slug: 1
+      slug: 13
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -214,14 +214,14 @@ endpoints:
         name: post_slug
         description: 'The slug of the post.'
         required: true
-        example: 11
+        example: 2
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      post_slug: 11
+      post_slug: 2
     queryParameters:
       page:
         name: page
@@ -263,7 +263,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer vEeV4f6aPDk86b1Zd5gca3h'
+      - 'Bearer aehvd4aV5ckE68f6Pbg1D3Z'
     controller: null
     method: null
     route: null
@@ -358,7 +358,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer VfgeaZ56hb63DPEvd1ak84c'
+      - 'Bearer DV3EevafZ8gk6d4acbP61h5'
     controller: null
     method: null
     route: null
@@ -387,14 +387,14 @@ endpoints:
         name: slug
         description: 'The slug of the post.'
         required: true
-        example: 18
+        example: 10
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      slug: 18
+      slug: 10
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -464,7 +464,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer P4VDfZ6Eavkb3d8c6e15agh'
+      - 'Bearer 6dkPf1bg6aEV5cahveZ3D84'
     controller: null
     method: null
     route: null
@@ -493,14 +493,14 @@ endpoints:
         name: slug
         description: 'The slug of the post.'
         required: true
-        example: 17
+        example: 18
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      slug: 17
+      slug: 18
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -511,7 +511,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer bV18P4akgec3Dda6hE5Z6fv'
+      - 'Bearer E643dgPfbV8a1hZck6eaD5v'
     controller: null
     method: null
     route: null
@@ -540,14 +540,14 @@ endpoints:
         name: post_slug
         description: 'The slug of the post.'
         required: true
-        example: 11
+        example: 2
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      post_slug: 11
+      post_slug: 2
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -569,7 +569,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 6h8g3VeaZ6vc1EbPak5dfD4'
+      - 'Bearer g86Pkahc41ab6V5vEde3fZD'
     controller: null
     method: null
     route: null
@@ -598,7 +598,7 @@ endpoints:
         name: post_slug
         description: 'The slug of the post.'
         required: true
-        example: 2
+        example: 6
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -608,15 +608,15 @@ endpoints:
         name: upload_ref
         description: ''
         required: true
-        example: 3
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      post_slug: 2
-      upload_ref: 3
+      post_slug: 6
+      upload_ref: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -627,7 +627,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1aVhvadfgPe6Z54D8b6kcE3'
+      - 'Bearer f6Vkgva3hDa4EecZ1P68b5d'
     controller: null
     method: null
     route: null

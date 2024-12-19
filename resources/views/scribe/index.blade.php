@@ -26,7 +26,7 @@
             </style>
 
     <script>
-        var tryItOutBaseUrl = "https://blog-api.test";
+        var tryItOutBaseUrl = "https://blog-api-d168872c4b9a.herokuapp.com";
         var useCsrf = Boolean();
         var csrfUrl = "/sanctum/csrf-cookie";
     </script>
@@ -193,7 +193,7 @@
     <div class="content">
         <h1 id="introduction">Introduction</h1>
 <aside>
-    <strong>Base URL</strong>: <code>https://blog-api.test</code>
+    <strong>Base URL</strong>: <code>https://blog-api-d168872c4b9a.herokuapp.com</code>
 </aside>
 <p>This documentation aims to provide all the information you need to work with our API.</p>
 <aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
@@ -221,19 +221,19 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "https://blog-api.test/api/login" \
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/login" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"pedro.miller@example.net\",
-    \"password\": \"nQW|!God=\\/To=ng\"
+    \"email\": \"fmaggio@example.com\",
+    \"password\": \"r$[C|cZGS&lt;0(kh;1)g\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/login"
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/login"
 );
 
 const headers = {
@@ -242,8 +242,8 @@ const headers = {
 };
 
 let body = {
-    "email": "pedro.miller@example.net",
-    "password": "nQW|!God=\/To=ng"
+    "email": "fmaggio@example.com",
+    "password": "r$[C|cZGS&lt;0(kh;1)g"
 };
 
 fetch(url, {
@@ -332,10 +332,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-login"
-               value="pedro.miller@example.net"
+               value="fmaggio@example.com"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>pedro.miller@example.net</code></p>
+<p>Must be a valid email address. Example: <code>fmaggio@example.com</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -343,10 +343,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-login"
-               value="nQW|!God=/To=ng"
+               value="r$[C|cZGS<0(kh;1)g"
                data-component="body">
     <br>
-<p>Must be at least 6 characters. Example: <code>nQW|!God=/To=ng</code></p>
+<p>Must be at least 6 characters. Example: <code>r$[C|cZGS&lt;0(kh;1)g</code></p>
         </div>
         </form>
 
@@ -363,20 +363,20 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "https://blog-api.test/api/register" \
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/register" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"qui\",
-    \"email\": \"vivian.rippin@example.net\",
-    \"password\": \"H?+9]ns62!?^evKkq0\"
+    \"name\": \"deleniti\",
+    \"email\": \"mills.dayne@example.net\",
+    \"password\": \"bo($ffQd6Q&amp;Gm&gt;yI`{*d\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/register"
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/register"
 );
 
 const headers = {
@@ -385,9 +385,9 @@ const headers = {
 };
 
 let body = {
-    "name": "qui",
-    "email": "vivian.rippin@example.net",
-    "password": "H?+9]ns62!?^evKkq0"
+    "name": "deleniti",
+    "email": "mills.dayne@example.net",
+    "password": "bo($ffQd6Q&amp;Gm&gt;yI`{*d"
 };
 
 fetch(url, {
@@ -476,10 +476,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTapi-register"
-               value="qui"
+               value="deleniti"
                data-component="body">
     <br>
-<p>Example: <code>qui</code></p>
+<p>Example: <code>deleniti</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -487,10 +487,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-register"
-               value="vivian.rippin@example.net"
+               value="mills.dayne@example.net"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>vivian.rippin@example.net</code></p>
+<p>Must be a valid email address. Example: <code>mills.dayne@example.net</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -498,10 +498,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-register"
-               value="H?+9]ns62!?^evKkq0"
+               value="bo($ffQd6Q&Gm>yI`{*d"
                data-component="body">
     <br>
-<p>Example: <code>H?+9]ns62!?^evKkq0</code></p>
+<p>Example: <code>bo($ffQd6Q&amp;Gm&gt;yI</code>{*d`</p>
         </div>
         </form>
 
@@ -519,7 +519,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "https://blog-api.test/api/logout" \
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/logout" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -527,7 +527,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/logout"
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/logout"
 );
 
 const headers = {
@@ -645,7 +645,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "https://blog-api.test/api/comments/19/comments/add" \
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/comments/18/comments/add" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -657,7 +657,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/comments/19/comments/add"
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/comments/18/comments/add"
 );
 
 const headers = {
@@ -767,10 +767,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="comment_id"                data-endpoint="POSTapi-comments--comment_id--comments-add"
-               value="19"
+               value="18"
                data-component="url">
     <br>
-<p>The ID of the comment. Example: <code>19</code></p>
+<p>The ID of the comment. Example: <code>18</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -800,7 +800,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "https://blog-api.test/api/comments/15/update" \
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/comments/14/update" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -808,7 +808,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/comments/15/update"
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/comments/14/update"
 );
 
 const headers = {
@@ -913,10 +913,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="PUTapi-comments--id--update"
-               value="15"
+               value="14"
                data-component="url">
     <br>
-<p>The ID of the comment. Example: <code>15</code></p>
+<p>The ID of the comment. Example: <code>14</code></p>
             </div>
                     </form>
 
@@ -934,7 +934,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "https://blog-api.test/api/comments/13/destroy" \
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/comments/18/destroy" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -942,7 +942,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/comments/13/destroy"
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/comments/18/destroy"
 );
 
 const headers = {
@@ -1047,10 +1047,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="DELETEapi-comments--id--destroy"
-               value="13"
+               value="18"
                data-component="url">
     <br>
-<p>The ID of the comment. Example: <code>13</code></p>
+<p>The ID of the comment. Example: <code>18</code></p>
             </div>
                     </form>
 
@@ -1071,7 +1071,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://blog-api.test/api/posts?page=1&amp;per_page=10&amp;search=Laravel&amp;tags%5B%5D=tags%5B%5D%3Dlaravel%26tags%5B%5D%3Dphp" \
+    --get "https://blog-api-d168872c4b9a.herokuapp.com/api/posts?page=1&amp;per_page=10&amp;search=Laravel&amp;tags%5B%5D=tags%5B%5D%3Dlaravel%26tags%5B%5D%3Dphp" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -1089,7 +1089,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/posts"
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/posts"
 );
 
 const params = {
@@ -1323,14 +1323,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://blog-api.test/api/posts/1" \
+    --get "https://blog-api-d168872c4b9a.herokuapp.com/api/posts/13" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/posts/1"
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/posts/13"
 );
 
 const headers = {
@@ -1440,10 +1440,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="slug"                data-endpoint="GETapi-posts--slug-"
-               value="1"
+               value="13"
                data-component="url">
     <br>
-<p>The slug of the post. Example: <code>1</code></p>
+<p>The slug of the post. Example: <code>13</code></p>
             </div>
                     </form>
 
@@ -1461,7 +1461,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://blog-api.test/api/posts/11/comments?page=1&amp;per_page=10" \
+    --get "https://blog-api-d168872c4b9a.herokuapp.com/api/posts/2/comments?page=1&amp;per_page=10" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -1469,7 +1469,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/posts/11/comments"
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/posts/2/comments"
 );
 
 const params = {
@@ -1598,10 +1598,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="post_slug"                data-endpoint="GETapi-posts--post_slug--comments"
-               value="11"
+               value="2"
                data-component="url">
     <br>
-<p>The slug of the post. Example: <code>11</code></p>
+<p>The slug of the post. Example: <code>2</code></p>
             </div>
                         <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
                                     <div style="padding-left: 28px; clear: unset;">
@@ -1642,7 +1642,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "https://blog-api.test/api/posts/store" \
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/posts/store" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
@@ -1653,7 +1653,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/posts/store"
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/posts/store"
 );
 
 const headers = {
@@ -1831,7 +1831,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PATCH \
-    "https://blog-api.test/api/posts/18/update" \
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/posts/10/update" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
@@ -1842,7 +1842,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/posts/18/update"
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/posts/10/update"
 );
 
 const headers = {
@@ -1953,10 +1953,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="slug"                data-endpoint="PATCHapi-posts--slug--update"
-               value="18"
+               value="10"
                data-component="url">
     <br>
-<p>The slug of the post. Example: <code>18</code></p>
+<p>The slug of the post. Example: <code>10</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -2032,7 +2032,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "https://blog-api.test/api/posts/17/destroy" \
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/posts/18/destroy" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2040,7 +2040,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/posts/17/destroy"
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/posts/18/destroy"
 );
 
 const headers = {
@@ -2145,10 +2145,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="slug"                data-endpoint="DELETEapi-posts--slug--destroy"
-               value="17"
+               value="18"
                data-component="url">
     <br>
-<p>The slug of the post. Example: <code>17</code></p>
+<p>The slug of the post. Example: <code>18</code></p>
             </div>
                     </form>
 
@@ -2166,7 +2166,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "https://blog-api.test/api/posts/11/comments/add" \
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/posts/2/comments/add" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -2178,7 +2178,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/posts/11/comments/add"
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/posts/2/comments/add"
 );
 
 const headers = {
@@ -2288,10 +2288,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="post_slug"                data-endpoint="POSTapi-posts--post_slug--comments-add"
-               value="11"
+               value="2"
                data-component="url">
     <br>
-<p>The slug of the post. Example: <code>11</code></p>
+<p>The slug of the post. Example: <code>2</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -2321,7 +2321,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "https://blog-api.test/api/posts/2/uploads/3/remove" \
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/posts/6/uploads/1/remove" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2329,7 +2329,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/posts/2/uploads/3/remove"
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/posts/6/uploads/1/remove"
 );
 
 const headers = {
@@ -2434,10 +2434,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="post_slug"                data-endpoint="DELETEapi-posts--post_slug--uploads--upload_ref--remove"
-               value="2"
+               value="6"
                data-component="url">
     <br>
-<p>The slug of the post. Example: <code>2</code></p>
+<p>The slug of the post. Example: <code>6</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>upload_ref</code></b>&nbsp;&nbsp;
@@ -2445,10 +2445,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="upload_ref"                data-endpoint="DELETEapi-posts--post_slug--uploads--upload_ref--remove"
-               value="3"
+               value="1"
                data-component="url">
     <br>
-<p>Example: <code>3</code></p>
+<p>Example: <code>1</code></p>
             </div>
                     </form>
 
@@ -2469,14 +2469,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://blog-api.test/api/tags?page=2&amp;per_page=5&amp;search=Laravel" \
+    --get "https://blog-api-d168872c4b9a.herokuapp.com/api/tags?page=2&amp;per_page=5&amp;search=Laravel" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/tags"
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/tags"
 );
 
 const params = {
@@ -2518,18 +2518,18 @@ access-control-allow-origin: *
     &quot;data&quot;: {
         &quot;current_page&quot;: 2,
         &quot;data&quot;: [],
-        &quot;first_page_url&quot;: &quot;https://blog-api.test/api/tags?query=Laravel&amp;page=1&quot;,
+        &quot;first_page_url&quot;: &quot;https://blog-api-d168872c4b9a.herokuapp.com/api/tags?query=Laravel&amp;page=1&quot;,
         &quot;from&quot;: null,
         &quot;last_page&quot;: 1,
-        &quot;last_page_url&quot;: &quot;https://blog-api.test/api/tags?query=Laravel&amp;page=1&quot;,
+        &quot;last_page_url&quot;: &quot;https://blog-api-d168872c4b9a.herokuapp.com/api/tags?query=Laravel&amp;page=1&quot;,
         &quot;links&quot;: [
             {
-                &quot;url&quot;: &quot;https://blog-api.test/api/tags?query=Laravel&amp;page=1&quot;,
+                &quot;url&quot;: &quot;https://blog-api-d168872c4b9a.herokuapp.com/api/tags?query=Laravel&amp;page=1&quot;,
                 &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;https://blog-api.test/api/tags?query=Laravel&amp;page=1&quot;,
+                &quot;url&quot;: &quot;https://blog-api-d168872c4b9a.herokuapp.com/api/tags?query=Laravel&amp;page=1&quot;,
                 &quot;label&quot;: &quot;1&quot;,
                 &quot;active&quot;: false
             },
@@ -2540,9 +2540,9 @@ access-control-allow-origin: *
             }
         ],
         &quot;next_page_url&quot;: null,
-        &quot;path&quot;: &quot;https://blog-api.test/api/tags&quot;,
+        &quot;path&quot;: &quot;https://blog-api-d168872c4b9a.herokuapp.com/api/tags&quot;,
         &quot;per_page&quot;: 15,
-        &quot;prev_page_url&quot;: &quot;https://blog-api.test/api/tags?query=Laravel&amp;page=1&quot;,
+        &quot;prev_page_url&quot;: &quot;https://blog-api-d168872c4b9a.herokuapp.com/api/tags?query=Laravel&amp;page=1&quot;,
         &quot;to&quot;: null,
         &quot;total&quot;: 0
     }
@@ -2668,7 +2668,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "https://blog-api.test/api/tags/store" \
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/tags/store" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -2680,7 +2680,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/tags/store"
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/tags/store"
 );
 
 const headers = {
@@ -2811,7 +2811,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "https://blog-api.test/api/tags/12/update" \
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/tags/13/update" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -2823,7 +2823,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/tags/12/update"
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/tags/13/update"
 );
 
 const headers = {
@@ -2933,10 +2933,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="slug"                data-endpoint="PUTapi-tags--slug--update"
-               value="12"
+               value="13"
                data-component="url">
     <br>
-<p>The slug of the tag. Example: <code>12</code></p>
+<p>The slug of the tag. Example: <code>13</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -2966,7 +2966,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "https://blog-api.test/api/tags/3/destroy" \
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/tags/11/destroy" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2974,7 +2974,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/tags/3/destroy"
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/tags/11/destroy"
 );
 
 const headers = {
@@ -3079,10 +3079,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="slug"                data-endpoint="DELETEapi-tags--slug--destroy"
-               value="3"
+               value="11"
                data-component="url">
     <br>
-<p>The slug of the tag. Example: <code>3</code></p>
+<p>The slug of the tag. Example: <code>11</code></p>
             </div>
                     </form>
 
@@ -3104,7 +3104,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://blog-api.test/api/users?page=2&amp;per_page=5&amp;search=Laravel&amp;role=admin" \
+    --get "https://blog-api-d168872c4b9a.herokuapp.com/api/users?page=2&amp;per_page=5&amp;search=Laravel&amp;role=admin" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -3119,7 +3119,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/users"
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/users"
 );
 
 const params = {
@@ -3357,7 +3357,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://blog-api.test/api/users/create" \
+    --get "https://blog-api-d168872c4b9a.herokuapp.com/api/users/create" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -3365,7 +3365,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/users/create"
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/users/create"
 );
 
 const headers = {
@@ -3496,7 +3496,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "https://blog-api.test/api/users/store" \
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/users/store" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -3511,7 +3511,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/users/store"
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/users/store"
 );
 
 const headers = {
@@ -3678,7 +3678,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://blog-api.test/api/users/1" \
+    --get "https://blog-api-d168872c4b9a.herokuapp.com/api/users/1" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -3686,7 +3686,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/users/1"
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/users/1"
 );
 
 const headers = {
@@ -3829,7 +3829,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://blog-api.test/api/users/1/edit" \
+    --get "https://blog-api-d168872c4b9a.herokuapp.com/api/users/1/edit" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -3837,7 +3837,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/users/1/edit"
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/users/1/edit"
 );
 
 const headers = {
@@ -3980,7 +3980,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PATCH \
-    "https://blog-api.test/api/users/1/update" \
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/users/1/update" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -3995,7 +3995,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/users/1/update"
+    "https://blog-api-d168872c4b9a.herokuapp.com/api/users/1/update"
 );
 
 const headers = {
@@ -4174,7 +4174,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "https://blog-api.test/api//destroy" \
+    "https://blog-api-d168872c4b9a.herokuapp.com/api//destroy" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -4182,7 +4182,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api//destroy"
+    "https://blog-api-d168872c4b9a.herokuapp.com/api//destroy"
 );
 
 const headers = {

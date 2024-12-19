@@ -3,7 +3,7 @@
 
 
 <aside>
-    <strong>Base URL</strong>: <code>https://blog-api.test</code>
+    <strong>Base URL</strong>: <code>https://blog-api-d168872c4b9a.herokuapp.com</code>
 </aside>
 
 This documentation aims to provide all the information you need to work with our API.

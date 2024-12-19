@@ -23,14 +23,14 @@ endpoints:
         name: comment_id
         description: 'The ID of the comment.'
         required: true
-        example: 18
+        example: 9
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      comment_id: 18
+      comment_id: 9
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -52,7 +52,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer D4Z6fhgc3bdaPa51kevEV86'
+      - 'Bearer DE5c6aaf386deb1kh4vPVgZ'
     controller: null
     method: null
     route: null
@@ -79,14 +79,14 @@ endpoints:
         name: id
         description: 'The ID of the comment.'
         required: true
-        example: 14
+        example: 4
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 14
+      id: 4
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -97,7 +97,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer aavkgfDZ4hPc3ed6bE581V6'
+      - 'Bearer Eae5Zcdvhf66ag8D4P13bVk'
     controller: null
     method: null
     route: null
@@ -124,14 +124,14 @@ endpoints:
         name: id
         description: 'The ID of the comment.'
         required: true
-        example: 18
+        example: 4
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 18
+      id: 4
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -142,7 +142,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer bfeD6Zgch681dVk4vaEP35a'
+      - 'Bearer 8aE3vfaZ1cVPD64kh5dbeg6'
     controller: null
     method: null
     route: null

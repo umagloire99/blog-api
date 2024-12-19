@@ -121,7 +121,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer VcdZfPba5v6a8h3kg6eE41D'
+      - 'Bearer bgf836vVkD5Z4haea1dPc6E'
     controller: null
     method: null
     route: null
@@ -150,14 +150,14 @@ endpoints:
         name: slug
         description: 'The slug of the tag.'
         required: true
-        example: 13
+        example: 7
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      slug: 13
+      slug: 7
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -179,7 +179,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 6cfEV6gh54kebP1daa3ZDv8'
+      - 'Bearer d8ea6Pa5hgb46vcfDEZ3kV1'
     controller: null
     method: null
     route: null
@@ -208,14 +208,14 @@ endpoints:
         name: slug
         description: 'The slug of the tag.'
         required: true
-        example: 11
+        example: 16
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      slug: 11
+      slug: 16
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -226,7 +226,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer h1bVvD5fkE36c4Pae8d6gZa'
+      - 'Bearer eahED6vcV53k4Pf8dZa61bg'
     controller: null
     method: null
     route: null

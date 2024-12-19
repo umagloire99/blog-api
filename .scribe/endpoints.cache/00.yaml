@@ -32,7 +32,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: fmaggio@example.com
+        example: alice78@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -42,15 +42,15 @@ endpoints:
         name: password
         description: 'Must be at least 6 characters.'
         required: true
-        example: 'r$[C|cZGS<0(kh;1)g'
+        example: 'Fo{o2,p"7;nw`RfZk'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      email: fmaggio@example.com
-      password: 'r$[C|cZGS<0(kh;1)g'
+      email: alice78@example.net
+      password: 'Fo{o2,p"7;nw`RfZk'
     fileParameters: []
     responses: []
     responseFields: []
@@ -86,7 +86,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: deleniti
+        example: non
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -96,7 +96,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: mills.dayne@example.net
+        example: kaylin.gleason@example.com
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -106,16 +106,16 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: 'bo($ffQd6Q&Gm>yI`{*d'
+        example: 'SR@vzpEVP}[~'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      name: deleniti
-      email: mills.dayne@example.net
-      password: 'bo($ffQd6Q&Gm>yI`{*d'
+      name: non
+      email: kaylin.gleason@example.com
+      password: 'SR@vzpEVP}[~'
     fileParameters: []
     responses: []
     responseFields: []
@@ -155,7 +155,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Evf6dgbD5Z4a1Pe3akVh68c'
+      - 'Bearer EdZaf5v4k6Va6cDPhb18e3g'
     controller: null
     method: null
     route: null

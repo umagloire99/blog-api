@@ -225,8 +225,8 @@ You can switch the language used with the tabs at the top right (or from the nav
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"mitchell.matilda@example.com\",
-    \"password\": \"*VwsJ_z,JJV~h\"
+    \"email\": \"ara96@example.net\",
+    \"password\": \"~ajF1!\"
 }"
 </code></pre></div>
 
@@ -242,8 +242,8 @@ const headers = {
 };
 
 let body = {
-    "email": "mitchell.matilda@example.com",
-    "password": "*VwsJ_z,JJV~h"
+    "email": "ara96@example.net",
+    "password": "~ajF1!"
 };
 
 fetch(url, {
@@ -332,10 +332,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-login"
-               value="mitchell.matilda@example.com"
+               value="ara96@example.net"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>mitchell.matilda@example.com</code></p>
+<p>Must be a valid email address. Example: <code>ara96@example.net</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -343,10 +343,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-login"
-               value="*VwsJ_z,JJV~h"
+               value="~ajF1!"
                data-component="body">
     <br>
-<p>Must be at least 6 characters. Example: <code>*VwsJ_z,JJV~h</code></p>
+<p>Must be at least 6 characters. Example: <code>~ajF1!</code></p>
         </div>
         </form>
 
@@ -367,9 +367,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"ea\",
-    \"email\": \"rodriguez.lelah@example.com\",
-    \"password\": \"#w|g8Vk\"
+    \"name\": \"in\",
+    \"email\": \"lempi27@example.net\",
+    \"password\": \"ZCXO3w5tf~|.2LD\\/B\"
 }"
 </code></pre></div>
 
@@ -385,9 +385,9 @@ const headers = {
 };
 
 let body = {
-    "name": "ea",
-    "email": "rodriguez.lelah@example.com",
-    "password": "#w|g8Vk"
+    "name": "in",
+    "email": "lempi27@example.net",
+    "password": "ZCXO3w5tf~|.2LD\/B"
 };
 
 fetch(url, {
@@ -476,10 +476,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTapi-register"
-               value="ea"
+               value="in"
                data-component="body">
     <br>
-<p>Example: <code>ea</code></p>
+<p>Example: <code>in</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -487,10 +487,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-register"
-               value="rodriguez.lelah@example.com"
+               value="lempi27@example.net"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>rodriguez.lelah@example.com</code></p>
+<p>Must be a valid email address. Example: <code>lempi27@example.net</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -498,10 +498,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-register"
-               value="#w|g8Vk"
+               value="ZCXO3w5tf~|.2LD/B"
                data-component="body">
     <br>
-<p>Example: <code>#w|g8Vk</code></p>
+<p>Example: <code>ZCXO3w5tf~|.2LD/B</code></p>
         </div>
         </form>
 
@@ -645,7 +645,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "https://blog-api.test/api/comments/11/comments/add" \
+    "https://blog-api.test/api/comments/16/comments/add" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -657,7 +657,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/comments/11/comments/add"
+    "https://blog-api.test/api/comments/16/comments/add"
 );
 
 const headers = {
@@ -767,10 +767,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="comment_id"                data-endpoint="POSTapi-comments--comment_id--comments-add"
-               value="11"
+               value="16"
                data-component="url">
     <br>
-<p>The ID of the comment. Example: <code>11</code></p>
+<p>The ID of the comment. Example: <code>16</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -800,7 +800,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "https://blog-api.test/api/comments/20/update" \
+    "https://blog-api.test/api/comments/3/update" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -808,7 +808,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/comments/20/update"
+    "https://blog-api.test/api/comments/3/update"
 );
 
 const headers = {
@@ -913,10 +913,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="PUTapi-comments--id--update"
-               value="20"
+               value="3"
                data-component="url">
     <br>
-<p>The ID of the comment. Example: <code>20</code></p>
+<p>The ID of the comment. Example: <code>3</code></p>
             </div>
                     </form>
 
@@ -934,7 +934,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "https://blog-api.test/api/comments/17/destroy" \
+    "https://blog-api.test/api/comments/9/destroy" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -942,7 +942,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/comments/17/destroy"
+    "https://blog-api.test/api/comments/9/destroy"
 );
 
 const headers = {
@@ -1047,10 +1047,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="DELETEapi-comments--id--destroy"
-               value="17"
+               value="9"
                data-component="url">
     <br>
-<p>The ID of the comment. Example: <code>17</code></p>
+<p>The ID of the comment. Example: <code>9</code></p>
             </div>
                     </form>
 
@@ -1323,14 +1323,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://blog-api.test/api/posts/12" \
+    --get "https://blog-api.test/api/posts/16" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/posts/12"
+    "https://blog-api.test/api/posts/16"
 );
 
 const headers = {
@@ -1440,10 +1440,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="slug"                data-endpoint="GETapi-posts--slug-"
-               value="12"
+               value="16"
                data-component="url">
     <br>
-<p>The slug of the post. Example: <code>12</code></p>
+<p>The slug of the post. Example: <code>16</code></p>
             </div>
                     </form>
 
@@ -1461,7 +1461,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://blog-api.test/api/posts/1/comments?page=1&amp;per_page=10" \
+    --get "https://blog-api.test/api/posts/17/comments?page=1&amp;per_page=10" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -1469,7 +1469,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/posts/1/comments"
+    "https://blog-api.test/api/posts/17/comments"
 );
 
 const params = {
@@ -1598,10 +1598,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="post_slug"                data-endpoint="GETapi-posts--post_slug--comments"
-               value="1"
+               value="17"
                data-component="url">
     <br>
-<p>The slug of the post. Example: <code>1</code></p>
+<p>The slug of the post. Example: <code>17</code></p>
             </div>
                         <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
                                     <div style="padding-left: 28px; clear: unset;">
@@ -1831,7 +1831,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PATCH \
-    "https://blog-api.test/api/posts/13/update" \
+    "https://blog-api.test/api/posts/14/update" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
@@ -1842,7 +1842,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/posts/13/update"
+    "https://blog-api.test/api/posts/14/update"
 );
 
 const headers = {
@@ -1953,10 +1953,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="slug"                data-endpoint="PATCHapi-posts--slug--update"
-               value="13"
+               value="14"
                data-component="url">
     <br>
-<p>The slug of the post. Example: <code>13</code></p>
+<p>The slug of the post. Example: <code>14</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -2032,7 +2032,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "https://blog-api.test/api/posts/17/destroy" \
+    "https://blog-api.test/api/posts/3/destroy" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2040,7 +2040,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/posts/17/destroy"
+    "https://blog-api.test/api/posts/3/destroy"
 );
 
 const headers = {
@@ -2145,10 +2145,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="slug"                data-endpoint="DELETEapi-posts--slug--destroy"
-               value="17"
+               value="3"
                data-component="url">
     <br>
-<p>The slug of the post. Example: <code>17</code></p>
+<p>The slug of the post. Example: <code>3</code></p>
             </div>
                     </form>
 
@@ -2166,7 +2166,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "https://blog-api.test/api/posts/9/comments/add" \
+    "https://blog-api.test/api/posts/5/comments/add" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -2178,7 +2178,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/posts/9/comments/add"
+    "https://blog-api.test/api/posts/5/comments/add"
 );
 
 const headers = {
@@ -2288,10 +2288,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="post_slug"                data-endpoint="POSTapi-posts--post_slug--comments-add"
-               value="9"
+               value="5"
                data-component="url">
     <br>
-<p>The slug of the post. Example: <code>9</code></p>
+<p>The slug of the post. Example: <code>5</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -2321,7 +2321,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "https://blog-api.test/api/posts/20/uploads/16/remove" \
+    "https://blog-api.test/api/posts/15/uploads/20/remove" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2329,7 +2329,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/posts/20/uploads/16/remove"
+    "https://blog-api.test/api/posts/15/uploads/20/remove"
 );
 
 const headers = {
@@ -2434,10 +2434,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="post_slug"                data-endpoint="DELETEapi-posts--post_slug--uploads--upload_ref--remove"
-               value="20"
+               value="15"
                data-component="url">
     <br>
-<p>The slug of the post. Example: <code>20</code></p>
+<p>The slug of the post. Example: <code>15</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>upload_ref</code></b>&nbsp;&nbsp;
@@ -2445,10 +2445,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="upload_ref"                data-endpoint="DELETEapi-posts--post_slug--uploads--upload_ref--remove"
-               value="16"
+               value="20"
                data-component="url">
     <br>
-<p>Example: <code>16</code></p>
+<p>Example: <code>20</code></p>
             </div>
                     </form>
 
@@ -2811,7 +2811,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "https://blog-api.test/api/tags/4/update" \
+    "https://blog-api.test/api/tags/3/update" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -2823,7 +2823,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/tags/4/update"
+    "https://blog-api.test/api/tags/3/update"
 );
 
 const headers = {
@@ -2933,10 +2933,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="slug"                data-endpoint="PUTapi-tags--slug--update"
-               value="4"
+               value="3"
                data-component="url">
     <br>
-<p>The slug of the tag. Example: <code>4</code></p>
+<p>The slug of the tag. Example: <code>3</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -2966,7 +2966,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "https://blog-api.test/api/tags/6/destroy" \
+    "https://blog-api.test/api/tags/10/destroy" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2974,7 +2974,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://blog-api.test/api/tags/6/destroy"
+    "https://blog-api.test/api/tags/10/destroy"
 );
 
 const headers = {
@@ -3079,10 +3079,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="slug"                data-endpoint="DELETEapi-tags--slug--destroy"
-               value="6"
+               value="10"
                data-component="url">
     <br>
-<p>The slug of the tag. Example: <code>6</code></p>
+<p>The slug of the tag. Example: <code>10</code></p>
             </div>
                     </form>
 

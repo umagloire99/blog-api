@@ -30,7 +30,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: mitchell.matilda@example.com
+        example: ara96@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -40,15 +40,15 @@ endpoints:
         name: password
         description: 'Must be at least 6 characters.'
         required: true
-        example: '*VwsJ_z,JJV~h'
+        example: ~ajF1!
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      email: mitchell.matilda@example.com
-      password: '*VwsJ_z,JJV~h'
+      email: ara96@example.net
+      password: ~ajF1!
     fileParameters: []
     responses: []
     responseFields: []
@@ -84,7 +84,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: ea
+        example: in
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -94,7 +94,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: rodriguez.lelah@example.com
+        example: lempi27@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -104,16 +104,16 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: '#w|g8Vk'
+        example: ZCXO3w5tf~|.2LD/B
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      name: ea
-      email: rodriguez.lelah@example.com
-      password: '#w|g8Vk'
+      name: in
+      email: lempi27@example.net
+      password: ZCXO3w5tf~|.2LD/B
     fileParameters: []
     responses: []
     responseFields: []
@@ -153,7 +153,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 65vD6eVcEdkgaZ834b1haPf'
+      - 'Bearer bhevZV154c6PEdaak6g3D8f'
     controller: null
     method: null
     route: null
